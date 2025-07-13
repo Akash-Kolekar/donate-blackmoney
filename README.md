@@ -1,14 +1,35 @@
-# What are we making?
+# Buy Me a Coffee - dApp
 
-- Minimal html/js site
-- that has the following button which map to the solidity smart contract
-  - connect ✅
-  - buy coffee ✅
-    - Button to but coffee ✅
-    - Call a function on a smart contract ✅
-    - Have a test blockchain that we can call? ✅
-  - get balance ✅
-  - withdraw ✅
-  - typescript ✅
-  1. you cannot directly import the typescript into html file like we did a js file. for that we have to first compile the tyscript file into javascript file using this cmd `pnpm tsc path_of_the_file`, it will generate a new file with the same name but in .js formatted, that way the our frontend understands the typescript.
-  2. another way is to use vite. vite is a bundler it does all the things in the behind and we donot need to compile the ts manually, and also we can pass the ts file in html, it will automatically covert it into js and run. To install vite `pnpm add vite` . and moving forward we'll use react and next.js that does all the things behind for us.
+A minimal HTML/JS site with a frontend that interacts with a Solidity smart contract.
+
+## Features
+
+The site has buttons that map to the following Solidity smart contract functions:
+
+- [x] Connect Wallet
+- [x] Buy Coffee
+  - [x] A button to trigger the purchase.
+  - [x] Calls a function on the smart contract.
+  - [x] Works with a test blockchain.
+- [x] Get Balance
+- [x] Withdraw Funds
+- [x] Written in TypeScript
+
+## Notes on TypeScript Usage
+
+1.  **Manual Compilation**:
+    You cannot directly import a TypeScript (`.ts`) file into an HTML file as you would with a JavaScript (`.js`) file. It must first be compiled into JavaScript. You can do this with the TypeScript compiler:
+
+    ```bash
+    pnpm tsc path/to/your/file.ts
+    ```
+
+    This command generates a corresponding `.js` file that can be included in your HTML.
+
+2.  **Using a Bundler (like Vite)**:
+    A simpler approach is to use a modern build tool like Vite. Vite handles the TypeScript to JavaScript compilation automatically behind the scenes, allowing you to reference your `.ts` file directly in your HTML.
+    To install Vite:
+    ```bash
+    pnpm add vite
+    ```
+    Frameworks like React and Next.js also provide this bundling functionality out of the box.
